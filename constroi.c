@@ -1,8 +1,6 @@
-
 #define SERVIDOR_CONSTROI
 
-#include <stdio.h>
-#include "listas.h"
+#include "constroi.h"
 
 void ConstroiMalha(lista1 **epinicio) {
   FILE *arq;
@@ -30,9 +28,9 @@ void ConstroiMalha(lista1 **epinicio) {
   arq = fopen ("t103.txt", "r");
   pd1 = *epinicio;
   while ((c = getc (arq)) != EOF) {
-    fscanf (arq, "%d ", &n); 
+    fscanf (arq, "%d ", &n);
     for (i=1; i !=n+1; i++) {
-      c = getc (arq); 
+      c = getc (arq);
       pp1 = malloc (sizeof (lista2));
       pp1->ppre = *epinicio;
       while (pp1->ppre->disc != c)
@@ -42,7 +40,7 @@ void ConstroiMalha(lista1 **epinicio) {
         pd1->pacesso = pp1;
       else pp2->proxp = pp1;
       pp2 = pp1;
-      c = getc (arq);  
+      c = getc (arq);
     }
     pd1 = pd1->proxd;
   }

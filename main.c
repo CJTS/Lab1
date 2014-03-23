@@ -1,15 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
-#include "constroi.h"
-#include "linear.h"
-#include "percorre.h"
-
-main() {
+int main() {
   struct lista_disc *pinicio;
 
   ConstroiMalha (&pinicio);
   PercorreMalha (pinicio);
   PercursoLinear (pinicio);
-  
+
   getchar();
+  return 0;
 }
