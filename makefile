@@ -1,5 +1,9 @@
 all: malha clean
 
+teste: constroi.c Exemplo_teste.c
+	gcc -I./CUnit -L./CUnit Exemplo_teste.c -lcunit -o teste
+	./teste
+
 malha: main.o constroi.o linear.o percorre.o
 	gcc main.o constroi.o linear.o percorre.o -o Malha
 
