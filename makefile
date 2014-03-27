@@ -3,7 +3,7 @@ all: build clean
 build: main.o constroi.o linear.o percorre.o
 	gcc main.o constroi.o linear.o percorre.o -o exe
 
-main.o: main.c
+main.o: main.c main.h
 	gcc -c main.c
 
 constroi.o: constroi.h constroi.c
