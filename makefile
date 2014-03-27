@@ -1,7 +1,7 @@
-all: build clean
+all: malha clean
 
-build: main.o constroi.o linear.o percorre.o
-	gcc main.o constroi.o linear.o percorre.o -o exe
+malha: main.o constroi.o linear.o percorre.o
+	gcc main.o constroi.o linear.o percorre.o -o Malha
 
 main.o: main.c main.h
 	gcc -c main.c
